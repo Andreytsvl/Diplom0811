@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z(f&uq%od&&c-7h6ap-(zwz^0y6zq_cfi)rvi37nk1v%gn)7%p'
-#SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = 'django-insecure-z(f&uq%od&&c-7h6ap-(zwz^0y6zq_cfi)rvi37nk1v%gn)7%p'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -95,26 +95,26 @@ WSGI_APPLICATION = 'store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'andreyts$default',
-#         'USER': 'andreyts',
-#         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-#         'HOST': 'andreyts.mysql.pythonanywhere-services.com',
-#         'OPTIONS': {
-#             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
-#             'charset': 'utf8mb4',
-#         },
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'andreytsvla$default',
+        'USER': 'andreytsvla',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': 'andreytsvla.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
